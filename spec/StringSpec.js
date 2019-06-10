@@ -46,7 +46,7 @@ describe("Add", function() {
     
   it("should ignore numbers bigger than 1000", function() {
     let sum = Add("2,1000");
-    expect(sum).toBe("2");
+    expect(sum).toBe(2);
      
   })
     
@@ -62,10 +62,11 @@ describe("Add", function() {
      
   })
     
-it("should throw an error if negative numbers are passed", function() {
-    let sum = Add("-1,-2");
-    expect(sum).toThrowError("negatives not allowed");
-   
-  })
+it("should throw an error if negative numbers are passed", function(){
+        expect(function () {
+            let sum = Add("-1,-2");
+        }).toThrow(new Error("negatives not allowed"));
+    });
+    
 
 });

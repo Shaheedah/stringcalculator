@@ -9,17 +9,19 @@ function Add(numbers) {
     
   nums.forEach(element => {
     let number = parseInt(element);
+      
     if (!isNaN(number) && number < 1000) {
+          if(number < 0){
+        throw new Error("negatives not allowed");
+    } 
       sum = sum + number;
     }
       
-     if(number < 0){
-        throw Error("negatives not allowed" + number);
-    } 
-  });
+  
+  })
 
   return sum;
-}
+};
     
 
 
