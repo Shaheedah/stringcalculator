@@ -7,7 +7,9 @@ function Add(numbers) {
   let nums = numbers.split(/[,\n;*%]/);
   
     
-  nums.forEach(element => {
+
+
+   nums.forEach(element => {
     let number = parseInt(element);
       
     if (!isNaN(number) && number < 1000) {
@@ -17,12 +19,11 @@ function Add(numbers) {
       sum = sum + number;
     }
       
-  
-  })
+    
+   })
 
   return sum;
 };
-    
 
 
 
